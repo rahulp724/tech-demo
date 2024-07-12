@@ -14,9 +14,8 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set up Google Cloud SDK
-      uses: google-github-actions/setup-gcloud@master
+      uses: google-github-actions/setup-gcloud@v0.3.0
       with:
-        version: 'latest'
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true
 
@@ -45,3 +44,4 @@ jobs:
         TF_VAR_region: "us-central1"
         TF_VAR_service_name: "flask-app"
         TF_VAR_image: "us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/my-repo/flask-app:latest"
+#####
