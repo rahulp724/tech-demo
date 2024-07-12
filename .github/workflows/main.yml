@@ -45,3 +45,4 @@ jobs:
         TF_VAR_region: "us-central1"
         TF_VAR_service_name: "flask-app"
         TF_VAR_image: "us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/my-repo/flask-app:latest"
+#####
